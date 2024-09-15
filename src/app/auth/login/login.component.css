@@ -1,0 +1,19 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+mat-card {
+    width: 400px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.login-actions {
+    margin-top: 20px;
+    text-align: center;
+}
