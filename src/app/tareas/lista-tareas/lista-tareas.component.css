@@ -1,0 +1,17 @@
+.container {
+    padding: 20px;
+}
+
+mat-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.mat-icon-button {
+    margin-left: 10px;
+}

@@ -12,7 +12,7 @@
     <!-- Cuadrícula de proyectos -->
     <mat-grid-list cols="3" rowHeight="320px" gutterSize="16px" *ngIf="proyectos.length > 0">
         <mat-grid-tile *ngFor="let proyecto of proyectos">
-            <mat-card class="proyecto-card">
+            <mat-card (click)="verTareas(proyecto.id)" class="proyecto-card">
                 <mat-card-header>
                     <mat-card-title>{{ proyecto.id }} - {{ proyecto.name }}</mat-card-title>
                 </mat-card-header>

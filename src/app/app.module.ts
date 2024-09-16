@@ -16,12 +16,15 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpErrorInterceptor } from './http-error-interceptor.service';
+import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LayoutComponent
+    LayoutComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { HttpErrorInterceptor } from './http-error-interceptor.service';
     MatFormFieldModule,
     HttpClientModule,
     MatToolbarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [
     {
