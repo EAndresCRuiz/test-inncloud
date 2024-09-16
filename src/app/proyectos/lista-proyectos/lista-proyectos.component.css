@@ -1,0 +1,60 @@
+.container {
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3f51b5;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.loading p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.proyecto-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+mat-grid-list {
+    height: auto;
+}
+
+mat-grid-tile {
+    min-height: 300px;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-content {
+    flex-grow: 1;
+    text-align: center;
+}
+
+mat-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+mat-card-content p {
+    font-size: 14px;
+    color: #757575;
+    margin-top: 10px;
+    text-align: center;
+}

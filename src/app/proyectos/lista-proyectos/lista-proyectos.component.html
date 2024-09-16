@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="title">Proyectos Disponibles</h1>
+
+    <!-- Mensaje de carga -->
+    <div *ngIf="proyectos.length === 0" class="loading">
+        <mat-spinner></mat-spinner>
+        <p>Cargando proyectos...</p>
+    </div>
+
+    <!-- Cuadrícula de proyectos -->
+    <mat-grid-list cols="3" rowHeight="320px" gutterSize="16px" *ngIf="proyectos.length > 0">
+        <mat-grid-tile *ngFor="let proyecto of proyectos">
+            <mat-card class="proyecto-card">
+                <mat-card-header>
+                    <mat-card-title>{{ proyecto.id }} - {{ proyecto.name }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{ proyecto.company.catchPhrase }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary">Ver Detalles</button>
+                    <button mat-button color="accent">Editar</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

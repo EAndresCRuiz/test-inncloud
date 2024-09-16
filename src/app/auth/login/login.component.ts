@@ -21,6 +21,7 @@ export class LoginComponent {
 
   onLogin(): void {
     const { username, password } = this.loginForm.value;
+    
     if (this.authService.login(username, password)) {
       this.router.navigate(['/proyectos']);
     } else {

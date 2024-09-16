@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+    <span>Mi Aplicación</span>
+    <span class="spacer"></span>
+    <button *ngIf="isAuthenticated()" mat-button (click)="onLogout()" color="warn">Cerrar Sesión</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
