@@ -14,4 +14,20 @@ export class ProyectosService {
     getProyectos(): Observable<any[]> {
         return this.http.get<any[]>(this.apiUrl);
     }
+
+    createProyecto(proyecto: any): Observable<any> {
+        return this.http.post<any>(this.apiUrl, proyecto);
+    }
+
+    getProyectoById(id: number): Observable<any> {
+        return this.http.get<any>(`${this.apiUrl}/${id}`);
+    }
+
+    updateProyecto(id: number, proyecto: any): Observable<any> {
+        return this.http.put<any>(`${this.apiUrl}/${id}`, proyecto);
+    }
+
+    deleteProyecto(id: number): Observable<any> {
+        return this.http.delete<any>(`${this.apiUrl}/${id}`);
+    }
 }

@@ -7,11 +7,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar'; // Para la barra de herramientas
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; // Para el spinner de carga
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CrearProyectoComponent } from './crear-proyecto/crear-proyecto.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
-    ListaProyectosComponent
+    ListaProyectosComponent,
+    CrearProyectoComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +28,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; /
     MatGridListModule,
     MatButtonModule,
     MatToolbarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatSnackBarModule
   ]
 })
 export class ProyectosModule { }

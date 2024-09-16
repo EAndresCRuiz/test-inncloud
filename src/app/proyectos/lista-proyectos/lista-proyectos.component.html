@@ -1,6 +1,8 @@
 <div class="container">
     <h1 class="title">Proyectos Disponibles</h1>
 
+    <button mat-raised-button color="primary" routerLink="/proyectos/crear">Nuevo Proyecto</button>
+
     <!-- Mensaje de carga -->
     <div *ngIf="proyectos.length === 0" class="loading">
         <mat-spinner></mat-spinner>
@@ -18,8 +20,8 @@
                     <p>{{ proyecto.company.catchPhrase }}</p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button color="primary">Ver Detalles</button>
-                    <button mat-button color="accent">Editar</button>
+                    <button mat-button color="primary" (click)="onEdit(proyecto.id)">Editar</button>
+                    <button mat-button color="warn" (click)="onDelete(proyecto.id)">Eliminar</button>
                 </mat-card-actions>
             </mat-card>
         </mat-grid-tile>
